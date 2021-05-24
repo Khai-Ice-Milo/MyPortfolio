@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta chartset="utf-8">
+<meta name="viewport" content="width=device-width, intial-slace=1.0">
+<title>Khairi Portfolio Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+
+
+
+<!-- FONTS HERE-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&family=Roboto:&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header id="emptyTop">
+    <div class="emptySpace" id="emptyTop">
+        <img src="#" alt="">
+    </div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+        <!--this is the sub component-->
+        <ul class="nav__list">
+            <!--sub component for nav__item-->
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
+        </ul>
+    </nav>
+</header>
+    <!--MY INTRO-->
+    <!--use id for anchor or java only-->
+    <section class="intro" id="home">
+                                                <!--modifier class-->
+        <h1 class="section__title section__title--intro">
+            <strong>Khairi Omar Ali</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Developer in Training</p>
+        <img src="img/me.png" alt="My Pic" class="intro__img">
+    </section>
+
+    <!--my skills Section-->
+    <section class="my-skills" id="skills">
+        <h2 class="section__title section__title--skills">My Skills</h2>
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML5</h3>
+                <p>Recapped during Coding.bn Programme</p>
+            </div> <!-- SKILL-->
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Recapped during Coding.bn Programme</p>
+            </div> <!-- SKILL-->
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Taught by Coding.Bn employees</p>
+            </div> <!-- SKILL-->
+
+            <div class="skill">
+                <h3>MySQL</h3>
+                <p>Taught by lecturers in Micronet International College during Diploma</p>
+            </div> <!-- SKILL-->
+
+            <div class="skill">
+                <h3>PHP</h3>
+                <p>Taught by lecturers in Micronet International College during High National Diploma</p>
+            </div> <!-- SKILL-->
+
+            <div class="skill">
+                <h3>Basic Networking</h3>
+                <p>Self taught during 3 months attachment in Telekom Brunei Berhad</p>
+            </div> <!-- SKILL-->
+        </div> <!--skills closed-->
+
+        <a href="#project" class="btn">Projects</a>
+    </section>
+
+
+    <!--ABOUT ME-->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">About Me</h2>
+        <p class="section__subtitle section__subtitle--about">Coding.BN Programme Participant</p>
+
+        <div class="about--me__body">
+            <p>Recent graduate with a high national diploma in computer science with personal experiences resolving medium software and hardware issues. Able to support user’s technical inquiries as well as educate users on new technologies.</p>
+                <p>Specialize in consumer Networking products and configurations.</p>
+        </div>
+
+        <img src="img/full.jpg" alt="Any Picture" class="about-me__img">
+    </section>
+
+    <!--My Projects-->
+    <section class="my-projects" id="project">
+        <h2 class="section__title section__title--project">Projects</h2>
+        <p class="section__subtitle section__subtitle--project">Projects created while studying with Coding.Bn</p>
+
+
+        <!--portfolio-->
+        <div class="portfolio">
+
+            <!--portfolio 1-->
+            <div class="img1-wrap">
+            <a href="portfolio_item1.html" class="portfolio__item">
+                <img src="img/cv.jpg" alt="" class="portfolio__img">
+                <div class="overlay">
+                    <div class="text">Curriculum Vitae</div>
+                </div>
+            </a> 
+        </div>
+
+        <div class="img1-wrap">
+            <a href="portfolio_item2.html" class="portfolio__item">
+                <img src="img/type1.png" alt="" class="portfolio__img">
+                <div class="overlay">
+                    <div class="text">Text Editor</div>
+                </div>
+            </a> 
+        </div>
+
+
+        <div class="img1-wrap">
+            <a href="portfolio_item3.html" class="portfolio__item">
+                <img src="img/pod.jpg" alt="" class="portfolio__img">
+                <div class="overlay">
+                    <div class="text">Team Assignment</div>
+                </div>
+            </a> 
+        </div>
+    </div>
+    </section>
+
+
+    <footer class="foot">
+        <a href="mailto:khairi_omarali@Hotmail.com" class="foot__link">Khairi_Omarali@Hotmail.com</a>
+        <br><a href="tel:+673-832-7797" class="foot__link">+673 8327797</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a href="https://www.linkedin.com/in/ak-muhd-dzulkhairi-bin-pg-omar-ali-224a04172" target="_blank" class="social-list__link"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                linkedin</a></li>
+
+            <li class="social-list__item"><a href="https://github.com/Khai-Ice-Milo" target="_blank" class="social-list__link"><i class="fa fa-github" aria-hidden="true"></i>
+                github</a></li>
+        </ul>
+
+        
+    </footer>
+    <a href="#emptyTop" class="goToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+

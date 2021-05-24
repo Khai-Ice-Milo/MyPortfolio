@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    
+}
+
+
+.bodye{
+    background-color:rgb(145, 142, 142);
+    margin-top: -30px;
+}
+
+body{
+    font-size:14px;
+    line-height: 22px;
+    color: #555555;
+    font-family:Helvetica;
+    margin:0;
+    padding:0;
+
+}
+
+.bold{
+    font-weight:700;
+    font: size 20px;
+    text-transform: uppercase;
+    margin-top:-30px;
+}
+
+.semi_bold{
+    font-weight:500;
+    font-size:16px;
+
+}
+
+.content{
+    width:800px;
+    height:auto;
+    display:flex;
+    margin: 50px auto;
+    border-style:solid;
+    border-color: #ff8000;
+}
+
+.content .content-left{
+    width:320px;        /* to use smaller space use 280px */
+    background: #c83200;
+}
+
+.content .content-left .content-profile{
+    width:100%;
+    height:280px;
+
+}
+.content .content-left .content-profile img{
+    width:100%;
+    height:100%;
+}
+
+.content .content-left .content-info{
+    padding: 0 25px;
+}
+
+.content .title_info{
+    margin-bottom:0px;
+}
+.content .content-left .bold{
+    color:#fff;
+}
+
+.content .content-left .regular{
+    color: #ff8000;
+}
+
+.content .content-item{
+    margin-top:39px;
+    padding:25px 0;
+    border-bottom:2px solid #ff8000;
+}
+
+.content .content-left .content-item:last-child
+.content .content-right .content-item:last-child{
+    border-bottom: 0px;
+}
+
+.content .content-left ul li {
+    display: flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+.content .content-left ul li:last-child{
+    margin-bottom: 0;
+}
+
+.content .content-left ul li .icon{
+    width:35px;
+    height:35px;
+    background:#fff;
+    color:#c83200;
+    border-radius:50%;
+    margin-right:15px;
+    font-size:26px;
+    position:relative;
+}
+
+.content .icon i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.content .content-left ul li .data{
+    color:#fff;
+    
+}
+
+.content .content-left ul li .data1{
+    color:#fff;
+    margin-top:6px;
+}
+
+.content .content-left .content_skills ul li{
+    color: #fff;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.content .content-left .content_skills ul li .cont_skill_name{
+    width:25%;
+}
+
+.content .content-left .content_skills ul li .cont_skill_prog{
+    width:60%;
+    margin: 0 5px;
+    height: 5px;
+    background:#ff8000;
+    position:relative;
+}
+
+.content .content-left .content_skills ul li .cont_skill_stats{
+    width:15%;
+    
+}
+
+.content .content-left .content_skills ul li .cont_skill_prog span{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background:#fff;
+}
+
+.content .content-right{
+    width:520px;
+    background:#fff ;
+    padding:25px;
+}
+
+.content .content-right .bold{
+    color:#ff8000;
+    
+}
+
+.content .content-right .content_experience ul, .content .content-right .content_education ul{
+    padding-left:40px;
+    padding-bottom: 3px;
+    overflow:hidden;
+}
+.content .content-right ul li{
+    position: relative;
+}
+
+.content .content-right ul li .date{
+    font-size:16px;
+    font-weight:500;
+    margin-bottom: 15px;
+}
+
+.content .content-right ul li .info{
+    margin-bottom:20px;
+}
+
+.content .content-right ul li:last-child .info{
+    margin-bottom:0;
+}
+
+.content .content-right .content_experience ul li:before, .content .content-right .content_education ul li:before{
+    content:"";
+    position:absolute;
+    top:5px;
+    left:-24px;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    border:2px solid #ff8000;
+}
+
+/* this part is for the line next to the content */
+.content .content-right .content_experience ul li:after{
+    content: "";
+    position:absolute;
+    top:14px;
+    left:-21px;
+    width:3px;
+    height:288px;
+    background: #ff8000;
+}
+.content .content-right .content_education ul li:after{
+    content: "";
+    position:absolute;
+    top:14px;
+    left:-21px;
+    width:3px;
+    height:169px;
+    background: #ff8000;
+    margin-bottom:30px;
+}
+
+.link {
+    color:#fff;
+    text-decoration: none; 
+    background-color: none;
+}
+
+.link:hover {
+    color:#ff8000;
+    text-decoration: none; 
+    background-color: none;
+}

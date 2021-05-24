@@ -1,0 +1,186 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+<html>
+  <head>
+      <script>
+
+        //save file function (button)
+        function saveFile()
+        {
+          const output = document.getElementById('text-content');
+          let data = output.value;
+
+          const textToBlob = new Blob([data],{type:'text/html'})
+
+          const sFileName = "saveFile.html";
+
+          let newFileLink = document.createElement("a");
+          newFileLink.download = sFileName;
+
+            if (window.webkitURL != null)
+              {
+                newFileLink.href = window.webkitURL.createObjectURL(textToBlob);
+              }
+                else
+                {
+                newFileLink.href = window.URL.createObjectURL(textToBlob);
+                newFileLink.style.display = "none";
+                document.body.appendChild(newFileLink);
+                }
+
+                newFileLink.click();
+              }
+          </script>
+
+    <title> Notepad </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="setup">
+
+
+      <!--font style & size script-->
+      <script>
+        function changeFont(font){
+          document.getElementById('text-content').style.fontFamily=font.value;
+
+        }
+
+        function fontSizeChange(f){
+            var s=document.getElementById('text-content');
+            s.style.fontSize=f.value+'px';
+        }
+        
+        function changecolor(color){
+          document.getElementById("text-content").style.color = color.value;
+        }
+
+      </script>
+
+      <!--font style section-->
+      <!--onchange is used when a user clicks a button that changes the element or style of the output-->
+      <!--the (this) is used to notify the javascript that the function section is that area only-->
+      
+      <div class="font-styling">
+      <select class="font-style" onchange="changeFont(this)">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+      </select>
+
+      <select class="font-color"  onchange="changecolor (this);">
+      <option value="Black">Black</option>
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="Yellow">Yellow</option>
+      <option value="Pink">Pink</option>
+      </select>
+
+      <select class="font-size" onchange="fontSizeChange(this)">
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option>20</option>
+        <option>22</option>
+        <option>24</option>
+        <option>26</option>
+        <option>28</option>
+        <option>36</option>
+        <option>48</option>
+        <option>64</option>
+      </select>
+      </div>
+      <!--font style end-->
+
+      <!--font design script-->
+      <script>
+        function boLd(){
+          var tabal=document.getElementById('text-content').style.fontWeight;
+          if(tabal=='normal'){
+            document.getElementById('text-content').style.fontWeight='Bold';
+          }
+          else{
+            document.getElementById('text-content').style.fontWeight='normal';
+          } 
+        }
+
+        function itaLic(){
+          var kesiring=document.getElementById('text-content').style.fontStyle;
+          if(kesiring=='normal'){
+            document.getElementById('text-content').style.fontStyle='Italic';
+          }
+          else{
+            document.getElementById('text-content').style.fontStyle='normal';
+          } 
+        }
+
+        function underLine(){
+          var garisBawah=document.getElementById('text-content').style.textDecoration;
+          if(garisBawah!=='underline'){
+            document.getElementById('text-content').style.textDecoration='underline';
+          }
+          else{
+            document.getElementById('text-content').style.textDecoration='none';
+          } 
+        }
+        
+        function clearTextArea(){
+          document.getElementById('text-content').value="";
+        }
+
+        function fontCenter() {
+          document.getElementById("text-content").style.textAlign = "center";
+        }
+
+        function fontLeft() {
+          document.getElementById("text-content").style.textAlign = "left";
+        }
+
+        function fontRight() {
+          document.getElementById("text-content").style.textAlign = "right";
+        }
+      </script>
+
+
+      <div class="font-design">
+      <button type="button"  class="fa fa-bold"  aria-hidden="true" onClick="boLd()"></button>
+      <button type="button"  class="fa fa-italic"  aria-hidden="true" onClick="itaLic()"></button>
+      <button type="button"  class="fa fa-underline"  aria-hidden="true" onClick="underLine()"></button>
+      <button type="button"  class="fa fa-align-left"  aria-hidden="true" onClick="fontLeft()"></button>
+      <button type="button"  class="fa fa-align-center" aria-hidden="true" onClick="fontCenter()"></button>
+      <button type="button"  class="fa fa-align-right"  aria-hidden="true" onClick="fontRight()"></button>
+      </div>
+      
+      <div class="text-area-content">
+      <textarea id="text-content"></textarea>
+      </div>
+
+
+      <div class="output-section">
+      <button class="fa fa-trash" aria-hidden="true" type="reset" onClick="clearTextArea()">Clear</button>
+      <button class="fa fa-floppy-o" aria-hidden="true" onClick="saveFile()">Save</button>
+      <input type="file" value="Get File" id="fileToLoad" class="chooseFile">
+      <button class="fa fa-folder-open" aria-hidden="true" onClick="uploadFile()">Load</button>
+      </div>
+
+      <!--view file test-->
+      <script>
+        function uploadFile(){
+          var fileToLoad = document.getElementById("fileToLoad").files[0];
+ 
+          var fileReader = new FileReader();
+          fileReader.onload = function(fileLoadedEvent) 
+          {
+              var textFromFileLoaded = fileLoadedEvent.target.result;
+              document.getElementById("text-content").value = textFromFileLoaded;
+          };
+          fileReader.readAsText(fileToLoad, "UTF-8");
+        }
+      </script>
+  </body>
+</html>
